@@ -1,0 +1,34 @@
+<form novalidate role="form" name="form">
+	<div id="modal-paint-with-friend" class="horizontal-align-middle modal-wrapper">
+		<div class="modal-header"><h3>Group painting</h3></div>
+		<div class="modal-body">
+			<div class="form-group">
+				<label>Join</label>
+				<input type="text" class="form-control" name="sharedKey" placeholder="Shared key"
+				       data-ng-model="item.sharedKey" data-ng-pattern=/^[0-9A-F]{8}$/>
+				<button class="btn btn-info form-control"
+				        data-ng-click="JoinSharing()"
+						data-ng-disabled="form.sharedKey.$invalid || !item.sharedKey"
+						data-ng-hide="item.sharing && item.sharedKey && !item.sharingKey">Join now!
+				<button class="btn btn-warning form-control"
+				        data-ng-click="StopSharing()"
+				        data-ng-show="item.sharing && item.sharedKey && !item.sharingKey">Leave</button>
+			</div>
+
+			<div class="form-group">
+				<label>Or start sharing</label>
+				<input type="text" class="form-control" name="sharingKey" placeholder="Sharing key"
+				       data-ng-model="item.sharingKey" disabled>
+				<button class="btn btn-info form-control"
+				        data-ng-click="StartSharing()"
+				        data-ng-hide="item.sharingKey">Create key
+				<button class="btn btn-warning form-control"
+				        data-ng-click="StopSharing()"
+				        data-ng-show="item.sharingKey">Stop sharing</button>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-success" data-ng-click="Cancel()">Done</button>
+		</div>
+	</div>
+</form>

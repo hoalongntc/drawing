@@ -1,0 +1,11 @@
+applications:
+- services:
+  - Redis Cloud-09
+  disk_quota: 1024M
+  host: html5-drawing
+  name: html5-drawing
+  command: node app.js
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 256M

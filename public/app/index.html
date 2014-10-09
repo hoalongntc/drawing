@@ -1,0 +1,284 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Drawing</title>
+    <meta name="description" content="A drawing webapp base on HTML5 canvas feature. It has some extra feature like collaborate, chat,...">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<!-- Google+ meta -->
+	<meta name="google-signin-clientid" content="874956188791-7g0gbnjf3rmb4mvaonti15eg8ahp996f.apps.googleusercontent.com" />
+	<meta name="google-signin-cookiepolicy" content="single_host_origin" />
+
+	<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+	<!-- Not build vendor css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="../bower_components/toastr/toastr.css" />
+    <!-- endbower -->
+
+    <!-- build:css({.tmp,app}) styles/plugins.css -->
+
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+
+  </head>
+  <body data-ng-app="DrawingApp">
+
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div id="container" class="full-screen loader-wrapper loader-icon loader-xlg" data-ng-controller="AppCtrl">
+
+	    <!--<button class="btn btn-success" style="position: absolute; top: 100px; left: 100px;" id="dropbox">Dropbox</button>-->
+
+	    <div id="loader-wrapper" class="full-screen">
+		    <div id="loader"></div>
+		    <div id="loading-text">LOADING</div>
+	    </div>
+
+	    <div id="content">
+		    <canvas id="main-canvas">
+			    Your browser not support Canvas object.
+			    Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+		    </canvas>
+	    </div>
+
+	    <div id="color-extend" class="hide">
+		    <div id="color-extend-container"></div>
+		    <div id="color-extend-bottom" class="color-placeholder">
+			    <div id="color-extend-close"><img src="images/close.png"></div>
+		    </div>
+	    </div>
+
+	    <div id="chat-container">
+		    <div id="members-container">
+			    <div id="more-friend" class="member-action"
+			         tooltip="Find more friends" tooltip-placement="left">
+				    <i class="fa fa-fw fa-plus"></i></div>
+
+			    <div id="members-wrapper" class="loader-wrapper loader-icon loader-md"></div>
+
+			    <div id="start-sharing" class="member-action"
+			         tooltip="Start sharing mode" tooltip-placement="left">
+				    <i class="fa fa-fw fa-share-alt"></i></div>
+			    <div id="stop-sharing" class="member-action"
+			         tooltip="Leave sharing group" tooltip-placement="left">
+				    <i class="fa fa-fw fa-sign-out"></i></div>
+			    <div id="hide-messages" class="member-action"
+			         tooltip="Hide messages" tooltip-placement="left">
+				    <i class="fa fa-fw fa-times"></i></div>
+		    </div>
+
+		    <div id="messages-container">
+			    <div id="friend-info-container" class="loader-wrapper loader-icon">
+				    <span id="friend-info-text" class="vertical-align-middle"></span>
+				    <button id="friend-info-cancel" class="friend-info-command btn btn-danger vertical-align-middle">Cancel</button>
+				    <button id="friend-info-add-friend" class="friend-info-command btn btn-success vertical-align-middle">Add Friend</button>
+				    <button id="friend-info-un-friend" class="friend-info-command btn btn-danger vertical-align-middle">unFriend</button>
+				    <button id="friend-info-reject" class="friend-info-command btn btn-danger vertical-align-middle">Reject</button>
+				    <button id="friend-info-accept" class="friend-info-command btn btn-success btn-gap-h vertical-align-middle">Accept</button>
+			    </div>
+
+			    <div id="member-search">
+				    <form name="form" novalidate>
+					    <input id="member-search-text" type="text" placeholder="Find friends...">
+					    <button id="member-search-send" type="submit" class="message-send" disabled>
+						    <i class="fa fa-search"></i>
+					    </button>
+				    </form>
+			    </div>
+
+			    <div id="message-tabs" class="btn-group btn-group-justified">
+				    <div id="tab-messages" class="btn btn-tumblr">Messages</div>
+				    <div id="tab-notifications" class="btn btn-tumblr">Notifications</div>
+			    </div>
+
+			    <div id="messages-wrapper" class="active"></div>
+			    <div id="notifications-wrapper"></div>
+			    <div id="members-search-wrapper" class="loader-wrapper loader-icon loader-lg"></div>
+
+			    <div id="stickers-wrapper">
+				    <div id="sticker-sets"></div>
+				    <div id="stickers-container"></div>
+			    </div>
+
+			    <div id="message-input">
+				    <form name="form" novalidate>
+					    <button type="button" class="sticker-toggle animation shining" id="sticker-toggle">
+					    </button>
+					    <input type="text" class="message-text" id="message-text" placeholder="Say somethings...">
+					    <button type="submit" class="message-send" id="message-send" disabled>
+						    <i class="fa fa-share"></i>
+					    </button>
+				    </form>
+			    </div>
+		    </div>
+	    </div>
+
+	    <div id="menu-tools">
+		    <div id="menu">
+			    <div id="login-tool" class="avatar-picture empty loader-wrapper loader-icon loader-round" data-ng-click="ShowLogin()"><i class="fa fa-user"></i></div>
+
+			    <div class="tool-group">
+				    <div id="setting" class="tool tool-left disabled" title="Update account info" data-ng-click="ShowUpdate()">
+					    <i class="fa fa-fw fa-cogs"></i>
+					    <span>Settings</span>
+				    </div>
+
+				    <div id="logout" class="tool tool-right disabled" title="Logout" data-ng-click="Logout()">
+					    <i class="fa fa-fw fa-sign-out"></i>
+				    </div>
+			    </div>
+			    <a id="download" class="tool" download="paint.png" target="_blank" title="Save image">
+				    <i class="fa fa-fw fa-camera-retro"></i>
+				    <span>Download</span>
+			    </a>
+			    <div id="new" class="tool" title="New">
+				    <i class="fa fa-fw fa-file-o"></i>
+				    <span>Clear drawing</span>
+			    </div>
+			    <div class="tool" title="Open images" data-ng-click="OpenFile()">
+				    <i class="fa fa-fw fa-folder-open"></i>
+				    <span>Open</span>
+			    </div>
+		    </div>
+		    <div id="opener"><i class="fa fa-angle-double-right fa-2x"></i></div>
+	    </div>
+
+	    <div id="info-tools">
+			<div class="tool"
+			     tooltip="Change canvas size" tooltip-placement="left"
+			     data-ng-click="ChangeCanvasSize()">
+				<a>{{canvasSize.width}} x {{canvasSize.height}}</a>
+			</div>
+		    <div id="message-toggle" class="tool hide" title="Show messages"><i class="fa fa-comments fa-2x"></i></div>
+	    </div>
+
+	    <div id="bottom-panel">
+		    <div id="tools"></div>
+		    <div id="color-extend-open" title="More color"><img src="images/plus.png"></div>
+		    <div id="color-container"></div>
+		    <div id="size-container" class="animation shining" title="Brush size"><div id="size-core"></div></div>
+		    <div id="opacity-container" class="animation shining" title="Opacity"><div id="opacity-core"></div></div>
+	    </div>
+    </div>
+
+    <!--[if lt IE 9]>
+    <script src="../bower_components/es5-shim/es5-shim.js"></script>
+    <script src="../bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-scenario/angular-scenario.js"></script>
+    <script src="../bower_components/toastr/toastr.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../bower_components/bootstrap-file-input/bootstrap.file-input.js"></script>
+    <script src="../bower_components/jquery.nicescroll/jquery.nicescroll.js"></script>
+    <script src="../bower_components/socket.io-client/socket.io.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../bower_components/async/lib/async.js"></script>
+    <script src="../bower_components/q/q.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/polyfill.js -->
+    <script src="scripts/polyfill/WindowActive.js"></script>
+    <script src="scripts/polyfill/animframe_polyfill.js"></script>
+    <script src="scripts/polyfill/bind_polyfill.js"></script>
+    <script src="scripts/polyfill/classlist_polyfill.js"></script>
+    <script src="scripts/polyfill/Blob.js"></script>
+    <script src="scripts/polyfill/canvas-toBlob.js"></script>
+    <script src="scripts/polyfill/FileSaver.js"></script>
+    <script src="scripts/polyfill/ImageResizer.js"></script>
+    <script src="scripts/polyfill/Request.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/layout.js"></script>
+    <script src="scripts/resource_manager.js"></script>
+    <script src="scripts/storage_manager.js"></script>
+    <script src="scripts/notify_manager.js"></script>
+    <script src="scripts/account_manager.js"></script>
+    <script src="scripts/socket_manager.js"></script>
+    <script src="scripts/keyboard_input_manager.js"></script>
+    <script src="scripts/objects.js"></script>
+    <script src="scripts/tools.js"></script>
+    <script src="scripts/state_manager.js"></script>
+    <script src="scripts/file_manager.js"></script>
+    <script src="scripts/content_manager.js"></script>
+    <script src="scripts/chat_manager.js"></script>
+    <script src="scripts/application.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/app.js -->
+    <script src="scripts/angular/app.js"></script>
+    <script src="scripts/angular/AppFactories.js"></script>
+    <script src="scripts/angular/AppDirectives.js"></script>
+    <script src="scripts/angular/AppCtrl.js"></script>
+    <!-- endbuild -->
+
+    <!-- start facebook sdk -->
+    <script type="text/javascript">
+	    window.fbAsyncInit = function() {
+		    FB.init({
+			    appId      : '948264951856174', // Test with 949487905067212, real with 948264951856174
+			    cookie     : true,  // enable cookies to allow the server to access
+			    // the session
+			    xfbml      : true,  // parse social plugins on this page
+			    version    : 'v2.0' // use version 2.0
+		    });
+
+		    AccountManager.facebookInitiated();
+	    };
+
+	    // Load the SDK asynchronously
+	    (function(d, s, id) {
+		    var js, fjs = d.getElementsByTagName(s)[0];
+		    if (d.getElementById(id)) return;
+		    js = d.createElement(s); js.id = id; js.async = true;
+		    js.src = "//connect.facebook.net/en_US/sdk.js";
+		    fjs.parentNode.insertBefore(js, fjs);
+	    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- end facebook sdk -->
+
+    <!-- start google+ sdk -->
+    <script type="text/javascript">
+	    window.___gcfg = {
+		    lang: 'en-US',
+		    parsetags: 'explicit'
+	    };
+	    function gapiLoaded() {
+		    AccountManager.googleAPIInitiated();
+	    }
+	    (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		    po.src = '//apis.google.com/js/api.js?onload=gapiLoaded';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	    })();
+    </script>
+    <!-- end google+ sdk -->
+
+    <!-- start dropbox sdk -->
+    <script type="text/javascript" async src="//www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="rd5neb0n08nru23"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.10.2/dropbox.min.js"></script>
+    <!-- end dropbox sdk -->
+</body>
+</html>

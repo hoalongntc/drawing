@@ -1,0 +1,27 @@
+<div id="modal-login-form" class="modal-wrapper horizontal-align-middle form-container page-signin">
+	<div class="modal-close" data-ng-click="Cancel()"><i class="fa fa-2x fa-times"></i></div>
+	<div class="modal-header">
+		<h3>OPEN IMAGE</h3>
+	</div>
+	<div class="modal-body">
+		<section class="row">
+			<div class="open-file open-file-local space" tooltip="Open local file" tooltip-placement="bottom">
+				<input type="file" title="" class="fa fa-folder-open no-box-shadow"
+				       data-ui-file-upload data-ng-model="file.file"
+				       accept="image/png,image/jpg,image/jpeg">
+			</div>
+
+			<div class="open-file open-file-dropbox space" data-ng-click="OpenDropbox()">
+				<img src="images/dropbox.png" class="align-middle-center">
+			</div>
+
+			<div class="open-file open-file-google-drive space" data-ng-click="OpenGoogleDrive()">
+				<img src="images/drive.png" class="align-middle-center">
+			</div>
+
+			<div class="open-file open-file-one-drive space">
+				<img src="images/skydrive.png" class="align-middle-center">
+			</div>
+		</section>
+	</div>
+</div>

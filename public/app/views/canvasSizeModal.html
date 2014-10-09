@@ -1,0 +1,32 @@
+<form novalidate role="form" name="form">
+	<div id="modal-canvas-size" class="horizontal-align-middle modal-wrapper">
+		<div class="modal-header"><h3>CANVAS SIZE</h3></div>
+		<div class="modal-body">
+			<div class="form-group">
+				<label>Width</label>
+				<div class="input-group">
+					<input type="number" class="form-control" name="width" placeholder="Min: 100px"
+					       data-ng-model="item.width" min=100 required>
+					<span class="input-group-addon">px</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Height</label>
+				<div class="input-group">
+					<input type="number" class="form-control" name="height" placeholder="Min: 100px"
+					       data-ng-model="item.height" min=100 required>
+					<span class="input-group-addon">px</span>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label>Or</label>
+				<button class="btn btn-info form-control" data-ng-click="FullViewPort()">Full viewport</button>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-success" data-ng-click="Apply()" data-ng-disabled="form.$invalid">Apply</button>
+			<button class="btn btn-warning" data-ng-click="Cancel()">Cancel</button>
+		</div>
+	</div>
+</form>

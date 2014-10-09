@@ -1,0 +1,33 @@
+<form novalidate role="form" name="form">
+	<div id="modal-login" class="horizontal-align-middle modal-wrapper">
+		<div class="modal-header"><h3>Account</h3></div>
+		<div class="modal-body">
+			<div class="form-group">
+				<label>With facebook</label>
+				<button class="btn btn-facebook form-control"
+				        data-ng-show="!item.facebook"
+						data-ng-click="Login('facebook')"><i class="fa fa-facebook"></i> | Login with facebook</button>
+			</div>
+
+			<div class="form-group">
+				<label>Or use</label>
+				<input type="text" class="form-control" name="name" placeholder="Your name"
+				       data-ng-model="item.name">
+
+				<div class="login-avatar-wrapper">
+					<input type="file" title="Avatar" class="btn-success login-avatar-file"
+					       data-ui-file-upload
+					       data-ng-model="item.file" accept="image/png,image/jpg">
+
+					<span class="login-avatar-holder" data-ng-class="{disabled: !item.picture}" data-ng-style="{ backgroundImage: 'url(\'' + (item.picture || '#') + '\')' }"><i class="fa fa-user"></i></span>
+				</div>
+
+				<button class="btn btn-info form-control"
+				        data-ng-click="Login()" data-ng-disabled="!item.name">Save</button>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-warning" data-ng-click="Cancel()">Cancel</button>
+		</div>
+	</div>
+</form>
