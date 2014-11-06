@@ -152,6 +152,7 @@ form .form-control.ng-invalid:focus {
 .loader-wrapper:before, .loader-wrapper:after {
   opacity: 0;
   z-index: 0;
+  visibility: hidden;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -169,6 +170,7 @@ form .form-control.ng-invalid:focus {
   right: 0;
   bottom: 0;
   opacity: 1;
+  visibility: visible;
   z-index: 1500;
   background: rgba(40, 51, 51, 0.8);
 
@@ -181,6 +183,7 @@ form .form-control.ng-invalid:focus {
   top: 50%;
   left: 50%;
   opacity: 1;
+  visibility: visible;
   z-index: 1500;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -305,6 +308,7 @@ form .form-control.ng-invalid:focus {
 #loader-wrapper.disabled {
   top: 200%;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -464,6 +468,7 @@ form .form-control.ng-invalid:focus {
 
       .chatting-wrapper {
         opacity: 0;
+        visibility: hidden;
         -webkit-transition: all 0.2s ease;
         -moz-transition: all 0.2s ease;
         -o-transition: all 0.2s ease;
@@ -473,11 +478,13 @@ form .form-control.ng-invalid:focus {
     .member-wrapper:hover {
       .chatting-wrapper {
         opacity: 0.5;
+        visibility: visible;
       }
     }
     .member-wrapper.active {
       .chatting-wrapper {
         opacity: 1;
+        visibility: visible;
       }
     }
     .member-wrapper.has-message {
@@ -490,7 +497,8 @@ form .form-control.ng-invalid:focus {
     }
     .member-wrapper.offline {
       .member {
-        opacity: 0.3;
+        opacity: 0.5;
+        visibility: visible;
       }
     }
 
@@ -645,6 +653,7 @@ form .form-control.ng-invalid:focus {
     height: 50px;
     padding: 5px;
     opacity: 0;
+    visibility: hidden;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
@@ -687,6 +696,7 @@ form .form-control.ng-invalid:focus {
   #friend-info-container.is-loading {
     .loader-wrapper {
       opacity: 1;
+      visibility: visible;
       z-index: 5;
     }
   }
@@ -697,6 +707,7 @@ form .form-control.ng-invalid:focus {
     right: -300px;
     width: 300px;
     opacity: 0;
+    visibility: hidden;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
@@ -710,6 +721,7 @@ form .form-control.ng-invalid:focus {
     width: 370px;
     height: 50px;
     opacity: 0;
+    visibility: hidden;
     background: #fff;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
@@ -756,6 +768,7 @@ form .form-control.ng-invalid:focus {
     bottom: 50px;
     width: 300px;
     opacity: 0;
+    visibility: hidden;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
@@ -942,6 +955,7 @@ form .form-control.ng-invalid:focus {
     bottom: 0;
     right: -300px;
     opacity: 0;
+    visibility: hidden;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
@@ -994,6 +1008,7 @@ form .form-control.ng-invalid:focus {
     width: 300px;
     right: -300px;
     opacity: 0;
+    visibility: hidden;
     background: #CCC;
     position: absolute;
     bottom: 40px;
@@ -1066,16 +1081,19 @@ form .form-control.ng-invalid:focus {
   #friend-info-container {
     top: 0;
     opacity: 1;
+    visibility: visible;
   }
   #message-tabs, #message-input {
     right: 0;
     opacity: 1;
+    visibility: visible;
   }
 }
 #container.show-messages.show-tab-messages {
   #messages-wrapper {
     right: 0;
     opacity: 1;
+    visibility: visible;
   }
   #message-tabs {
     #tab-messages {
@@ -1088,12 +1106,14 @@ form .form-control.ng-invalid:focus {
   #stickers-wrapper {
     right: 0;
     opacity: 1;
+    visibility: visible;
   }
 }
 #container.show-messages.show-tab-notifications {
   #notifications-wrapper {
     right: 0;
     opacity: 1;
+    visibility: visible;
   }
   #message-tabs {
     #tab-notifications {
@@ -1106,10 +1126,12 @@ form .form-control.ng-invalid:focus {
   #member-search {
     top: 0;
     opacity: 1;
+    visibility: visible;
   }
   #members-search-wrapper {
     right: 0;
     opacity: 1;
+    visibility: visible;
   }
   #more-friend:hover {
     i { color: graytext }
@@ -1178,6 +1200,7 @@ form .form-control.ng-invalid:focus {
 #bottom-panel:before {
   content: "";
   opacity: 1;
+  visibility: visible;
   position: absolute;
   height: 50px;
   width: 100%;
@@ -1218,6 +1241,7 @@ form .form-control.ng-invalid:focus {
 }
 #bottom-panel:hover:before {
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;

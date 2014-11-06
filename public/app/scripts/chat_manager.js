@@ -711,7 +711,7 @@ ChatManager = new function () {
             self.messages[message.to].push(message);
 
             if (self.messages[message.to].length > maxMessage)
-                self.messages[message.to].length.splice(0, self.messages[message.to].length - maxMessage);
+                self.messages[message.to].splice(0, self.messages[message.to].length - maxMessage);
 
             var openChat = isShowingMessages();
             var sameChat = (message.to == (lastChatWith ? lastChatWith.dataset.chatWith : ''));
