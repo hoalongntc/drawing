@@ -58,13 +58,21 @@ ChatManager = new function () {
         { regex: /:[-=]*\(/g, image: '126362084215255', title: 'Sad' }, // :-( :=( :(
         { regex: /:[-=]*\|/g, image: '126361960881934', title: 'Speechless' }, // :-| :=| :|
 
-        { regex: /:">/g, image: '126362184215245', title: 'Blush' }, // :">
-        { regex: /:[-=]*\$/g, image: '126362184215245', title: 'Blush' } // :-$ :=$ :$ alias for :">
+        { regex: /:\">/g, image: '126362184215245', title: 'Blush' }, // :">
+        { regex: /:[-=]*\$/g, image: '126362184215245', title: 'Blush' }, // :-$ :=$ :$ alias for :">
+
+        { regex: /^&lt;&lt;33$/g, image: 'heart02l', title: 'Hearts', size: 128 }, // <<33
+        { regex: /&lt;&lt;33/g, image: 'heart02', title: 'Hearts' }, // <<33...
+
+        { regex: /&lt;\|3/g, image: 'heart03', title: 'Heart' }, // <|3...
+        { regex: /&lt;3/g, image: 'heart04', title: 'Heart' }, // <3
+
+        { regex: /^ilu$/gi, image: 'heart05l', title: 'I Love You', size: 128 }, // ilu ILU Ilu...
+        { regex: /ilu/gi, image: 'heart05', title: 'I Love You' } // ilu ILU Ilu...
     ];
     var stickers = {
         'Pusheen': {
             default: 1,
-            image: '279586385548961',
             stickers: {
                 //1
                 '279586385548960': {
@@ -280,7 +288,6 @@ ChatManager = new function () {
         },
 
         'Koko' : {
-            image: '499671210115382',
             stickers: {
                 '499671063448730': {
                     'image': '499671063448730'
@@ -413,6 +420,201 @@ ChatManager = new function () {
                 },
                 '499671150115388': {
                     'image': '499671150115388'
+                }
+            }
+        },
+
+        'Piyomaru': {
+            stickers: {
+                '702110249875066': {
+                    'image': '702110249875066'
+                },
+                '702110259875065': {
+                    'image': '702110259875065'
+                },
+                '702110269875064': {
+                    'image': '702110269875064'
+                },
+                '702110279875063': {
+                    'image': '702110279875063'
+                },
+                '702110293208395': {
+                    'image': '702110293208395'
+                },
+                '702110306541727': {
+                    'image': '702110306541727'
+                },
+                '702110316541726': {
+                    'image': '702110316541726'
+                },
+                '702110326541725': {
+                    'image': '702110326541725'
+                },
+                '702110339875057': {
+                    'image': '702110339875057'
+                },
+                '702110349875056': {
+                    'image': '702110349875056'
+                },
+                '702110359875055': {
+                    'image': '702110359875055'
+                },
+                '702110369875054': {
+                    'image': '702110369875054'
+                },
+                '702110383208386': {
+                    'image': '702110383208386'
+                },
+                '702110399875051': {
+                    'image': '702110399875051'
+                },
+                '702110413208383': {
+                    'image': '702110413208383'
+                },
+                '702110436541714': {
+                    'image': '702110436541714'
+                },
+                '702110446541713': {
+                    'image': '702110446541713'
+                },
+                '702110456541712': {
+                    'image': '702110456541712'
+                },
+                '702110466541711': {
+                    'image': '702110466541711'
+                },
+                '702127056540052': {
+                    'image': '702127056540052'
+                }
+            }
+        },
+
+        'Yarukizero': {
+            stickers: {
+                '364383977058241': {
+                    'image': '364383977058241'
+                },
+                '364383987058240': {
+                    'image': '364383987058240'
+                },
+                '364383997058239': {
+                    'image': '364383997058239'
+                },
+                '364384007058238': {
+                    'image': '364384007058238'
+                },
+                '364384020391570': {
+                    'image': '364384020391570'
+                },
+                '364384040391568': {
+                    'image': '364384040391568'
+                },
+                '364384050391567': {
+                    'image': '364384050391567'
+                },
+                '364384060391566': {
+                    'image': '364384060391566'
+                },
+                '364384080391564': {
+                    'image': '364384080391564'
+                },
+                '364384093724896': {
+                    'image': '364384093724896'
+                },
+                '364384107058228': {
+                    'image': '364384107058228'
+                },
+                '364384117058227': {
+                    'image': '364384117058227'
+                },
+                '364384127058226': {
+                    'image': '364384127058226'
+                },
+                '364384137058225': {
+                    'image': '364384137058225'
+                },
+                '364384147058224': {
+                    'image': '364384147058224'
+                },
+                '364384157058223': {
+                    'image': '364384157058223'
+                },
+                '364384170391555': {
+                    'image': '364384170391555'
+                },
+                '364384180391554': {
+                    'image': '364384180391554'
+                },
+                '364384190391553': {
+                    'image': '364384190391553'
+                },
+                '364384200391552': {
+                    'image': '364384200391552'
+                }
+            }
+        },
+
+        'Sugar Cubs': {
+            stickers: {
+                '1573846232838561': {
+                    'image': '1573846232838561'
+                },
+                '1573846259505225': {
+                    'image': '1573846259505225'
+                },
+                '1573846282838556': {
+                    'image': '1573846282838556'
+                },
+                '1573846306171887': {
+                    'image': '1573846306171887'
+                },
+                '1573846349505216': {
+                    'image': '1573846349505216'
+                },
+                '1573846376171880': {
+                    'image': '1573846376171880'
+                },
+                '1573846412838543': {
+                    'image': '1573846412838543'
+                },
+                '1573846426171875': {
+                    'image': '1573846426171875'
+                },
+                '1573846436171874': {
+                    'image': '1573846436171874'
+                },
+                '1573846449505206': {
+                    'image': '1573846449505206'
+                },
+                '1573846472838537': {
+                    'image': '1573846472838537'
+                },
+                '1573846496171868': {
+                    'image': '1573846496171868'
+                },
+                '1573846506171867': {
+                    'image': '1573846506171867'
+                },
+                '1573846552838529': {
+                    'image': '1573846552838529'
+                },
+                '1573846619505189': {
+                    'image': '1573846619505189'
+                },
+                '1573846639505187': {
+                    'image': '1573846639505187'
+                },
+                '1573846656171852': {
+                    'image': '1573846656171852'
+                },
+                '1573846666171851': {
+                    'image': '1573846666171851'
+                },
+                '1573846699505181': {
+                    'image': '1573846699505181'
+                },
+                '1573846749505176': {
+                    'image': '1573846749505176'
                 }
             }
         }
@@ -630,7 +832,8 @@ ChatManager = new function () {
 
             var se = document.createElement('div');
             se.classList.add('sticker-set');
-            se.style.backgroundImage = 'url(images/stickers/' + stickers[setName].image + '.png)';
+            se.classList.add('avatar');
+            se.style.backgroundImage = 'url("images/stickers/sticker-open-' + setName + '.png")';
             se.dataset.stickerSet = setName;
             if(stickers[setName].default) {
                 se.classList.add('active');
@@ -677,6 +880,12 @@ ChatManager = new function () {
         // Replace emo
         emoticons.forEach(function (emo) {
             content = content.replace(emo.regex, function () {
+                if(emo.size) {
+                    return '<div class="emoticon e' + emo.image + '" title="' + (emo.title || '') + '"'
+                            + ' style="width: ' + emo.size + 'px; height: ' + emo.size + 'px;'
+                            + ' background-size: ' + emo.size + 'px ' + emo.size + 'px"></div>';
+                }
+
                 return '<div class="emoticon e' + emo.image + '" title="' + (emo.title || '') + '"></div>';
             });
         });
@@ -1131,7 +1340,7 @@ ChatManager = new function () {
         if(!m) return;
 
         var name = m.dataset.chatWithName;
-        
+
         var c = document.createElement('div');
         c.innerHTML = '<div class="member-plugin-inner chatting align-middle-center"><i class="fa fa-comment"></i></div>';
         c.classList.add('member-plugin-wrapper');
@@ -1537,7 +1746,7 @@ ChatManager = new function () {
     });
     SocketManager.on('newMessages', function (data) {
         if(!data || !data.username || !data.messages || !data.messages.length) return;
-        
+
         var user = self.members[data.username];
         if(data.username == AccountManager.getAccountInfo().username)
             user = AccountManager.getAccountInfo();
@@ -1590,7 +1799,7 @@ ChatManager = new function () {
             ToolsManager.playSound('newMessage');
         }
     });
-    
+
     SocketManager.on('requestInitMessages', function (done) {
         done(self.messages.__global);
     });

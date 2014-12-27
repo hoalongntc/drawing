@@ -1,3 +1,463 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+}
+a {
+  outline: 0;
+}
+/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+body {
+  margin: 0;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Address margins set differently in IE 6/7.
+ */
+p,
+pre {
+  margin: 1em 0;
+}
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+q {
+  quotes: none;
+}
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url("../fonts/glyphicons-halflings-regular.eot");
@@ -816,466 +1276,6 @@
   content: "\e200"
 }
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-input::-moz-focus-inner {
-  border: 0;
-}
-a {
-  outline: 0;
-}
-/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
-/* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
- */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-/**
- * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
- */
-audio,
-canvas,
-video {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-}
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-/**
- * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
- * Known issue: no IE 6 support.
- */
-[hidden] {
-  display: none;
-}
-/* ==========================================================================
-   Base
-   ========================================================================== */
-/**
- * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
- *    `em` units.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-html {
-  font-size: 100%;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
-/**
- * Address `font-family` inconsistency between `textarea` and other form
- * elements.
- */
-html,
-button,
-input,
-select,
-textarea {
-  font-family: sans-serif;
-}
-/**
- * Address margins handled incorrectly in IE 6/7.
- */
-body {
-  margin: 0;
-}
-/* ==========================================================================
-   Links
-   ========================================================================== */
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-a:focus {
-  outline: thin dotted;
-}
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-a:active,
-a:hover {
-  outline: 0;
-}
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-/**
- * Address font sizes and margins set differently in IE 6/7.
- * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
- * and Chrome.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-h2 {
-  font-size: 1.5em;
-  margin: 0.83em 0;
-}
-h3 {
-  font-size: 1.17em;
-  margin: 1em 0;
-}
-h4 {
-  font-size: 1em;
-  margin: 1.33em 0;
-}
-h5 {
-  font-size: 0.83em;
-  margin: 1.67em 0;
-}
-h6 {
-  font-size: 0.67em;
-  margin: 2.33em 0;
-}
-/**
- * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
- */
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-/**
- * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
- */
-b,
-strong {
-  font-weight: bold;
-}
-blockquote {
-  margin: 1em 40px;
-}
-/**
- * Address styling not present in Safari 5 and Chrome.
- */
-dfn {
-  font-style: italic;
-}
-/**
- * Address differences between Firefox and other browsers.
- * Known issue: no IE 6/7 normalization.
- */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-/**
- * Address styling not present in IE 6/7/8/9.
- */
-mark {
-  background: #ff0;
-  color: #000;
-}
-/**
- * Address margins set differently in IE 6/7.
- */
-p,
-pre {
-  margin: 1em 0;
-}
-/**
- * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  _font-family: 'courier new', monospace;
-  font-size: 1em;
-}
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-/**
- * Address CSS quotes not supported in IE 6/7.
- */
-q {
-  quotes: none;
-}
-/**
- * Address `quotes` property not supported in Safari 4.
- */
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-small {
-  font-size: 80%;
-}
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
-}
-/* ==========================================================================
-   Lists
-   ========================================================================== */
-/**
- * Address margins set differently in IE 6/7.
- */
-dl,
-menu,
-ol,
-ul {
-  margin: 1em 0;
-}
-dd {
-  margin: 0 0 0 40px;
-}
-/**
- * Address paddings set differently in IE 6/7.
- */
-menu,
-ol,
-ul {
-  padding: 0 0 0 40px;
-}
-/**
- * Correct list images handled incorrectly in IE 7.
- */
-nav ul,
-nav ol {
-  list-style: none;
-  list-style-image: none;
-}
-/* ==========================================================================
-   Embedded content
-   ========================================================================== */
-/**
- * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
- * 2. Improve image quality when scaled in IE 7.
- */
-img {
-  border: 0;
-  /* 1 */
-  -ms-interpolation-mode: bicubic;
-  /* 2 */
-}
-/**
- * Correct overflow displayed oddly in IE 9.
- */
-svg:not(:root) {
-  overflow: hidden;
-}
-/* ==========================================================================
-   Figures
-   ========================================================================== */
-/**
- * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
- */
-figure {
-  margin: 0;
-}
-/* ==========================================================================
-   Forms
-   ========================================================================== */
-/**
- * Correct margin displayed oddly in IE 6/7.
- */
-form {
-  margin: 0;
-}
-/**
- * Define consistent border, margin, and padding.
- */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-/**
- * 1. Correct color not being inherited in IE 6/7/8/9.
- * 2. Correct text not wrapping in Firefox 3.
- * 3. Correct alignment displayed oddly in IE 6/7.
- */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  white-space: normal;
-  /* 2 */
-  *margin-left: -7px;
-  /* 3 */
-}
-/**
- * 1. Correct font size not being inherited in all browsers.
- * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
- *    and Chrome.
- * 3. Improve appearance and consistency in all browsers.
- */
-button,
-input,
-select,
-textarea {
-  font-size: 100%;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-  vertical-align: baseline;
-  /* 3 */
-  *vertical-align: middle;
-  /* 3 */
-}
-/**
- * Address Firefox 3+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-button,
-input {
-  line-height: normal;
-}
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
- */
-button,
-select {
-  text-transform: none;
-}
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
- *    Known issue: inner spacing remains in IE 6.
- */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
-  *overflow: visible;
-  /* 4 */
-}
-/**
- * Re-set default cursor for disabled elements.
- */
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-/**
- * 1. Address box sizing set to content-box in IE 8/9.
- * 2. Remove excess padding in IE 8/9.
- * 3. Remove excess padding in IE 7.
- *    Known issue: excess padding remains in IE 6.
- */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-  *height: 13px;
-  /* 3 */
-  *width: 13px;
-  /* 3 */
-}
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box;
-}
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-/**
- * Remove inner padding and border in Firefox 3+.
- */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-/**
- * 1. Remove default vertical scrollbar in IE 6/7/8/9.
- * 2. Improve readability and alignment in all browsers.
- */
-textarea {
-  overflow: auto;
-  /* 1 */
-  vertical-align: top;
-  /* 2 */
-}
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -12429,8 +12429,8 @@ form .form-control.ng-invalid:focus {
 }
 #messages-container #message-input button.sticker-toggle {
   float: left;
-  background: url('../images/stickers/279586385548961.png') no-repeat 6px;
-  background-size: 32px 32px;
+  background: url('../images/stickers/sticker-open.png') no-repeat 6px;
+  background-size: 26px 32px;
 }
 #messages-container #stickers-wrapper {
   height: 350px;
@@ -12438,7 +12438,7 @@ form .form-control.ng-invalid:focus {
   right: -300px;
   opacity: 0;
   visibility: hidden;
-  background: #CCC;
+  background: #2E3338;
   position: absolute;
   bottom: 40px;
   -webkit-transition: all 0.2s ease;
@@ -12447,8 +12447,9 @@ form .form-control.ng-invalid:focus {
   transition: all 0.2s ease;
 }
 #messages-container #stickers-wrapper #sticker-sets {
-  height: 50px;
-  background: #B8B8B8;
+  height: 54px;
+  padding: 2px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
 }
 #messages-container #stickers-wrapper #sticker-sets .sticker-set {
   width: 50px;
@@ -12456,7 +12457,6 @@ form .form-control.ng-invalid:focus {
   float: left;
   background: transparent no-repeat 2.5px 2.5px;
   background-size: 45px 45px;
-  border-right: solid 1px rgba(255, 255, 255, 0.2);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -12612,6 +12612,27 @@ form .form-control.ng-invalid:focus {
 .emoticon.e126362184215245 {
   background-image: url(../images/emos/126362184215245.png);
 }
+.emoticon.eheart01 {
+  background-image: url(../images/emos/heart01.png);
+}
+.emoticon.eheart02 {
+  background-image: url(../images/emos/heart02.png);
+}
+.emoticon.eheart02l {
+  background-image: url(../images/emos/heart02l.png);
+}
+.emoticon.eheart03 {
+  background-image: url(../images/emos/heart03.png);
+}
+.emoticon.eheart04 {
+  background-image: url(../images/emos/heart04.png);
+}
+.emoticon.eheart05 {
+  background-image: url(../images/emos/heart05.png);
+}
+.emoticon.eheart05l {
+  background-image: url(../images/emos/heart05l.png);
+}
 /* Sticker */
 .sticker.small {
   width: 64px;
@@ -12621,355 +12642,535 @@ form .form-control.ng-invalid:focus {
 /* 1 */
 .sticker.small.s279586385548960 {
   width: 52px;
-  background: url(../images/stickers/279586385548960.png) -5px -5px;
+  background: url(../images/stickers/small/279586385548960.png) -5px -5px;
   background-size: 124px 148px;
 }
 .sticker.small.s279586372215628 {
   height: 59px;
-  background: url(../images/stickers/279586372215628.png) -5px -5px;
+  background: url(../images/stickers/small/279586372215628.png) -5px -5px;
   background-size: 148px 138px;
 }
 .sticker.small.s279586365548962 {
   width: 59px;
-  background: url(../images/stickers/279586365548962.png) -5px -5px;
+  background: url(../images/stickers/small/279586365548962.png) -5px -5px;
   background-size: 138px 148px;
 }
 .sticker.small.s279586362215629 {
   width: 62px;
-  background: url(../images/stickers/279586362215629.png) -6px -6px;
+  background: url(../images/stickers/small/279586362215629.png) -6px -6px;
   background-size: 148px 152px;
 }
 /* 5 */
 .sticker.small.s279586332215632 {
   width: 58px;
-  background: url(../images/stickers/279586332215632.png) -5px -5px;
+  background: url(../images/stickers/small/279586332215632.png) -5px -5px;
   background-size: 136px 148px;
 }
 .sticker.small.s279586392215626 {
   width: 48px;
-  background: url(../images/stickers/279586392215626.png) -4px -4px;
+  background: url(../images/stickers/small/279586392215626.png) -4px -4px;
   background-size: 112px 144px;
 }
 .sticker.small.s279586305548968 {
   width: 56px;
-  background: url(../images/stickers/279586305548968.png) -5px -5px;
+  background: url(../images/stickers/small/279586305548968.png) -5px -5px;
   background-size: 132px 148px;
 }
 .sticker.small.s279586282215637 {
   width: 57px;
-  background: url(../images/stickers/279586282215637.png) -4px -5px;
+  background: url(../images/stickers/small/279586282215637.png) -4px -5px;
   background-size: 134px 148px;
 }
 /* 9 */
 .sticker.small.s279586338882298 {
   width: 53px;
-  background: url(../images/stickers/279586338882298.png) -5px -5px;
+  background: url(../images/stickers/small/279586338882298.png) -5px -5px;
   background-size: 126px 148px;
 }
 .sticker.small.s279586322215633 {
   width: 63px;
-  background: url(../images/stickers/279586322215633.png) -6px -6px;
+  background: url(../images/stickers/small/279586322215633.png) -6px -6px;
   background-size: 152px 150px;
 }
 .sticker.small.s279586295548969 {
   height: 61px;
-  background: url(../images/stickers/279586295548969.png) -6px -6px;
+  background: url(../images/stickers/small/279586295548969.png) -6px -6px;
   background-size: 228px 219px;
 }
 .sticker.small.s279586275548971 {
   width: 52px;
-  background: url(../images/stickers/279586275548971.png) -5px -5px;
+  background: url(../images/stickers/small/279586275548971.png) -5px -5px;
   background-size: 186px 222px;
 }
 /* 13 */
 .sticker.small.s279586255548973 {
   height: 56px;
-  background: url(../images/stickers/279586255548973.png) -5px -5px;
+  background: url(../images/stickers/small/279586255548973.png) -5px -5px;
   background-size: 148px 132px;
 }
 .sticker.small.s279586285548970 {
   width: 47px;
-  background: url(../images/stickers/279586285548970.png) -4px -4px;
+  background: url(../images/stickers/small/279586285548970.png) -4px -4px;
   background-size: 110px 144px;
 }
 .sticker.small.s279586368882295 {
   width: 61px;
-  background: url(../images/stickers/279586368882295.png) -6px -6px;
+  background: url(../images/stickers/small/279586368882295.png) -6px -6px;
   background-size: 146px 152px;
 }
 .sticker.small.s279586388882293 {
   width: 62px;
-  background: url(../images/stickers/279586388882293.png) -6px -6px;
+  background: url(../images/stickers/small/279586388882293.png) -6px -6px;
   background-size: 148px 152px;
 }
 /* 17 */
 .sticker.small.s279586375548961 {
   height: 57px;
-  background: url(../images/stickers/279586375548961.png) -5px -5px;
+  background: url(../images/stickers/small/279586375548961.png) -5px -5px;
   background-size: 148px 134px;
 }
 .sticker.small.s279586345548964 {
   height: 51px;
-  background: url(../images/stickers/279586345548964.png) -5px -5px;
+  background: url(../images/stickers/small/279586345548964.png) -5px -5px;
   background-size: 148px 122px;
 }
 .sticker.small.s279586325548966 {
   height: 54px;
-  background: url(../images/stickers/279586325548966.png) -5px -5px;
+  background: url(../images/stickers/small/279586325548966.png) -5px -5px;
   background-size: 148px 128px;
 }
 .sticker.small.s279586342215631 {
   height: 50px;
-  background: url(../images/stickers/279586342215631.png) -5px -5px;
+  background: url(../images/stickers/small/279586342215631.png) -5px -5px;
   background-size: 148px 120px;
 }
 /* 21 */
 .sticker.small.s279586378882294 {
   height: 50px;
-  background: url(../images/stickers/279586378882294.png) -5px -5px;
+  background: url(../images/stickers/small/279586378882294.png) -5px -5px;
   background-size: 222px 180px;
 }
 .sticker.small.s279586302215635 {
   height: 51px;
-  background: url(../images/stickers/279586302215635.png) -5px -5px;
+  background: url(../images/stickers/small/279586302215635.png) -5px -5px;
   background-size: 148px 122px;
 }
 .sticker.small.s279586292215636 {
   height: 53px;
-  background: url(../images/stickers/279586292215636.png) -5px -5px;
+  background: url(../images/stickers/small/279586292215636.png) -5px -5px;
   background-size: 148px 126px;
 }
 .sticker.small.s279586288882303 {
   height: 50px;
-  background: url(../images/stickers/279586288882303.png) -5px -5px;
+  background: url(../images/stickers/small/279586288882303.png) -5px -5px;
   background-size: 148px 120px;
 }
 /* 25 */
 .sticker.small.s279586358882296 {
   height: 40px;
-  background: url(../images/stickers/279586358882296.png) -4px -4px;
+  background: url(../images/stickers/small/279586358882296.png) -4px -4px;
   background-size: 144px 96px;
 }
 .sticker.small.s279586328882299 {
   height: 41px;
-  background: url(../images/stickers/279586328882299.png) -4px -4px;
+  background: url(../images/stickers/small/279586328882299.png) -4px -4px;
   background-size: 144px 98px;
 }
 .sticker.small.s279586315548967 {
   height: 39px;
-  background: url(../images/stickers/279586315548967.png) -3px -3px;
+  background: url(../images/stickers/small/279586315548967.png) -3px -3px;
   background-size: 140px 90px;
 }
 .sticker.small.s279586262215639 {
   height: 39px;
-  background: url(../images/stickers/279586262215639.png) -3px -3px;
+  background: url(../images/stickers/small/279586262215639.png) -3px -3px;
   background-size: 140px 90px;
 }
 /* 29 */
 .sticker.small.s279586312215634 {
   height: 40px;
-  background: url(../images/stickers/279586312215634.png) -4px -4px;
+  background: url(../images/stickers/small/279586312215634.png) -4px -4px;
   background-size: 144px 96px;
 }
 .sticker.small.s279586272215638 {
   height: 37px;
-  background: url(../images/stickers/279586272215638.png) -3px -3px;
+  background: url(../images/stickers/small/279586272215638.png) -3px -3px;
   background-size: 140px 86px;
 }
 .sticker.small.s279586355548963 {
   height: 40px;
-  background: url(../images/stickers/279586355548963.png) -4px -4px;
+  background: url(../images/stickers/small/279586355548963.png) -4px -4px;
   background-size: 144px 96px;
 }
 .sticker.small.s279586318882300 {
   height: 34px;
-  background: url(../images/stickers/279586318882300.png) -3px -3px;
+  background: url(../images/stickers/small/279586318882300.png) -3px -3px;
   background-size: 140px 80px;
 }
 /* 33 */
 .sticker.small.s279586382215627 {
   height: 39px;
-  background: url(../images/stickers/279586382215627.png) -3px -3px;
+  background: url(../images/stickers/small/279586382215627.png) -3px -3px;
   background-size: 140px 90px;
 }
 .sticker.small.s279586348882297 {
   height: 42px;
-  background: url(../images/stickers/279586348882297.png) -4px -4px;
+  background: url(../images/stickers/small/279586348882297.png) -4px -4px;
   background-size: 144px 100px;
 }
 .sticker.small.s279586335548965 {
   height: 34px;
-  background: url(../images/stickers/279586335548965.png) -3px -3px;
+  background: url(../images/stickers/small/279586335548965.png) -3px -3px;
   background-size: 140px 80px;
 }
 .sticker.small.s279586258882306 {
   height: 44px;
-  background: url(../images/stickers/279586258882306.png) -4px -4px;
+  background: url(../images/stickers/small/279586258882306.png) -4px -4px;
   background-size: 144px 104px;
 }
 /* 37 */
 .sticker.small.s279586352215630 {
   height: 46px;
-  background: url(../images/stickers/279586352215630.png) -4px -4px;
+  background: url(../images/stickers/small/279586352215630.png) -4px -4px;
   background-size: 144px 108px;
 }
 .sticker.small.s279586308882301 {
   height: 46px;
-  background: url(../images/stickers/279586308882301.png) -4px -4px;
+  background: url(../images/stickers/small/279586308882301.png) -4px -4px;
   background-size: 144px 108px;
 }
 .sticker.small.s279586278882304 {
   height: 40px;
-  background: url(../images/stickers/279586278882304.png) -4px -4px;
+  background: url(../images/stickers/small/279586278882304.png) -4px -4px;
   background-size: 144px 96px;
 }
 .sticker.small.s279586298882302 {
   height: 47px;
-  background: url(../images/stickers/279586298882302.png) -4px -4px;
+  background: url(../images/stickers/small/279586298882302.png) -4px -4px;
   background-size: 144px 110px;
 }
 /* 41 */
 .sticker.small.s499671063448730 {
-  background: url(../images/stickers/499671063448730.png);
+  background-image: url(../images/stickers/small/499671063448730.png);
 }
 .sticker.small.s499671103448726 {
-  background: url(../images/stickers/499671103448726.png);
+  background-image: url(../images/stickers/small/499671103448726.png);
 }
 .sticker.small.s499670973448739 {
-  background: url(../images/stickers/499670973448739.png);
+  background-image: url(../images/stickers/small/499670973448739.png);
 }
 .sticker.small.s499670946782075 {
-  background: url(../images/stickers/499670946782075.png);
+  background-image: url(../images/stickers/small/499670946782075.png);
 }
 /* 45 */
 .sticker.small.s499671050115398 {
-  background: url(../images/stickers/499671050115398.png);
+  background-image: url(../images/stickers/small/499671050115398.png);
 }
 .sticker.small.s499671006782069 {
-  background: url(../images/stickers/499671006782069.png);
+  background-image: url(../images/stickers/small/499671006782069.png);
 }
 .sticker.small.s499671090115394 {
-  background: url(../images/stickers/499671090115394.png);
+  background-image: url(../images/stickers/small/499671090115394.png);
 }
 .sticker.small.s499671210115382 {
-  background: url(../images/stickers/499671210115382.png);
+  background-image: url(../images/stickers/small/499671210115382.png);
 }
 /* 49 */
 .sticker.small.s499670980115405 {
-  background: url(../images/stickers/499670980115405.png);
+  background-image: url(../images/stickers/small/499670980115405.png);
 }
 .sticker.small.s499671136782056 {
-  background: url(../images/stickers/499671136782056.png);
+  background-image: url(../images/stickers/small/499671136782056.png);
 }
 .sticker.small.s499671143448722 {
-  background: url(../images/stickers/499671143448722.png);
+  background-image: url(../images/stickers/small/499671143448722.png);
 }
 .sticker.small.s499671170115386 {
-  background: url(../images/stickers/499671170115386.png);
+  background-image: url(../images/stickers/small/499671170115386.png);
 }
 /* 53 */
 .sticker.small.s499671076782062 {
-  background: url(../images/stickers/499671076782062.png);
+  background-image: url(../images/stickers/small/499671076782062.png);
 }
 .sticker.small.s499671000115403 {
-  background: url(../images/stickers/499671000115403.png);
+  background-image: url(../images/stickers/small/499671000115403.png);
 }
 .sticker.small.s499671116782058 {
-  background: url(../images/stickers/499671116782058.png);
+  background-image: url(../images/stickers/small/499671116782058.png);
 }
 .sticker.small.s499670940115409 {
-  background: url(../images/stickers/499670940115409.png);
+  background-image: url(../images/stickers/small/499670940115409.png);
 }
 /* 57 */
 .sticker.small.s499671156782054 {
-  background: url(../images/stickers/499671156782054.png);
+  background-image: url(../images/stickers/small/499671156782054.png);
 }
 .sticker.small.s499671020115401 {
-  background: url(../images/stickers/499671020115401.png);
+  background-image: url(../images/stickers/small/499671020115401.png);
 }
 .sticker.small.s499671026782067 {
-  background: url(../images/stickers/499671026782067.png);
+  background-image: url(../images/stickers/small/499671026782067.png);
 }
 .sticker.small.s499671043448732 {
-  background: url(../images/stickers/499671043448732.png);
+  background-image: url(../images/stickers/small/499671043448732.png);
 }
 /* 61 */
 .sticker.small.s499671190115384 {
-  background: url(../images/stickers/499671190115384.png);
+  background-image: url(../images/stickers/small/499671190115384.png);
 }
 .sticker.small.s499671183448718 {
-  background: url(../images/stickers/499671183448718.png);
+  background-image: url(../images/stickers/small/499671183448718.png);
 }
 .sticker.small.s499671013448735 {
-  background: url(../images/stickers/499671013448735.png);
+  background-image: url(../images/stickers/small/499671013448735.png);
 }
 .sticker.small.s499671123448724 {
-  background: url(../images/stickers/499671123448724.png);
+  background-image: url(../images/stickers/small/499671123448724.png);
 }
 /* 65 */
 .sticker.small.s499671096782060 {
-  background: url(../images/stickers/499671096782060.png);
+  background-image: url(../images/stickers/small/499671096782060.png);
 }
 .sticker.small.s499671083448728 {
-  background: url(../images/stickers/499671083448728.png);
+  background-image: url(../images/stickers/small/499671083448728.png);
 }
 .sticker.small.s499671243448712 {
-  background: url(../images/stickers/499671243448712.png);
+  background-image: url(../images/stickers/small/499671243448712.png);
 }
 .sticker.small.s499671110115392 {
-  background: url(../images/stickers/499671110115392.png);
+  background-image: url(../images/stickers/small/499671110115392.png);
 }
 /* 69 */
 .sticker.small.s499670960115407 {
-  background: url(../images/stickers/499670960115407.png);
+  background-image: url(../images/stickers/small/499670960115407.png);
 }
 .sticker.small.s499670966782073 {
-  background: url(../images/stickers/499670966782073.png);
+  background-image: url(../images/stickers/small/499670966782073.png);
 }
 .sticker.small.s499671203448716 {
-  background: url(../images/stickers/499671203448716.png);
+  background-image: url(../images/stickers/small/499671203448716.png);
 }
 .sticker.small.s499671163448720 {
-  background: url(../images/stickers/499671163448720.png);
+  background-image: url(../images/stickers/small/499671163448720.png);
 }
 /* 73 */
 .sticker.small.s499671216782048 {
-  background: url(../images/stickers/499671216782048.png);
+  background-image: url(../images/stickers/small/499671216782048.png);
 }
 .sticker.small.s499671033448733 {
-  background: url(../images/stickers/499671033448733.png);
+  background-image: url(../images/stickers/small/499671033448733.png);
 }
 .sticker.small.s499671226782047 {
-  background: url(../images/stickers/499671226782047.png);
+  background-image: url(../images/stickers/small/499671226782047.png);
 }
 .sticker.small.s499671056782064 {
-  background: url(../images/stickers/499671056782064.png);
+  background-image: url(../images/stickers/small/499671056782064.png);
 }
 /* 77 */
 .sticker.small.s499671233448713 {
-  background: url(../images/stickers/499671233448713.png);
+  background-image: url(../images/stickers/small/499671233448713.png);
 }
 .sticker.small.s499671130115390 {
-  background: url(../images/stickers/499671130115390.png);
+  background-image: url(../images/stickers/small/499671130115390.png);
 }
 .sticker.small.s499670953448741 {
-  background: url(../images/stickers/499670953448741.png);
+  background-image: url(../images/stickers/small/499670953448741.png);
 }
 .sticker.small.s499671176782052 {
-  background: url(../images/stickers/499671176782052.png);
+  background-image: url(../images/stickers/small/499671176782052.png);
 }
 /* 81 */
 .sticker.small.s499671196782050 {
-  background: url(../images/stickers/499671196782050.png);
+  background-image: url(../images/stickers/small/499671196782050.png);
 }
 .sticker.small.s499671070115396 {
-  background: url(../images/stickers/499671070115396.png);
+  background-image: url(../images/stickers/small/499671070115396.png);
 }
 .sticker.small.s499670990115404 {
-  background: url(../images/stickers/499670990115404.png);
+  background-image: url(../images/stickers/small/499670990115404.png);
 }
 .sticker.small.s499671150115388 {
-  background: url(../images/stickers/499671150115388.png);
+  background-image: url(../images/stickers/small/499671150115388.png);
+}
+.sticker.small.s364383977058241 {
+  background-image: url(../images/stickers/small/364383977058241.png);
+}
+.sticker.small.s364383987058240 {
+  background-image: url(../images/stickers/small/364383987058240.png);
+}
+.sticker.small.s364383997058239 {
+  background-image: url(../images/stickers/small/364383997058239.png);
+}
+.sticker.small.s364384007058238 {
+  background-image: url(../images/stickers/small/364384007058238.png);
+}
+.sticker.small.s364384020391570 {
+  background-image: url(../images/stickers/small/364384020391570.png);
+}
+.sticker.small.s364384040391568 {
+  background-image: url(../images/stickers/small/364384040391568.png);
+}
+.sticker.small.s364384050391567 {
+  background-image: url(../images/stickers/small/364384050391567.png);
+}
+.sticker.small.s364384060391566 {
+  background-image: url(../images/stickers/small/364384060391566.png);
+}
+.sticker.small.s364384080391564 {
+  background-image: url(../images/stickers/small/364384080391564.png);
+}
+.sticker.small.s364384093724896 {
+  background-image: url(../images/stickers/small/364384093724896.png);
+}
+.sticker.small.s364384107058228 {
+  background-image: url(../images/stickers/small/364384107058228.png);
+}
+.sticker.small.s364384117058227 {
+  background-image: url(../images/stickers/small/364384117058227.png);
+}
+.sticker.small.s364384127058226 {
+  background-image: url(../images/stickers/small/364384127058226.png);
+}
+.sticker.small.s364384137058225 {
+  background-image: url(../images/stickers/small/364384137058225.png);
+}
+.sticker.small.s364384147058224 {
+  background-image: url(../images/stickers/small/364384147058224.png);
+}
+.sticker.small.s364384157058223 {
+  background-image: url(../images/stickers/small/364384157058223.png);
+}
+.sticker.small.s364384170391555 {
+  background-image: url(../images/stickers/small/364384170391555.png);
+}
+.sticker.small.s364384180391554 {
+  background-image: url(../images/stickers/small/364384180391554.png);
+}
+.sticker.small.s364384190391553 {
+  background-image: url(../images/stickers/small/364384190391553.png);
+}
+.sticker.small.s364384200391552 {
+  background-image: url(../images/stickers/small/364384200391552.png);
+}
+.sticker.small.s702110249875066 {
+  background-image: url(../images/stickers/small/702110249875066.png);
+}
+.sticker.small.s702110259875065 {
+  background-image: url(../images/stickers/small/702110259875065.png);
+}
+.sticker.small.s702110269875064 {
+  background-image: url(../images/stickers/small/702110269875064.png);
+}
+.sticker.small.s702110279875063 {
+  background-image: url(../images/stickers/small/702110279875063.png);
+}
+.sticker.small.s702110293208395 {
+  background-image: url(../images/stickers/small/702110293208395.png);
+}
+.sticker.small.s702110306541727 {
+  background-image: url(../images/stickers/small/702110306541727.png);
+}
+.sticker.small.s702110316541726 {
+  background-image: url(../images/stickers/small/702110316541726.png);
+}
+.sticker.small.s702110326541725 {
+  background-image: url(../images/stickers/small/702110326541725.png);
+}
+.sticker.small.s702110339875057 {
+  background-image: url(../images/stickers/small/702110339875057.png);
+}
+.sticker.small.s702110349875056 {
+  background-image: url(../images/stickers/small/702110349875056.png);
+}
+.sticker.small.s702110359875055 {
+  background-image: url(../images/stickers/small/702110359875055.png);
+}
+.sticker.small.s702110369875054 {
+  background-image: url(../images/stickers/small/702110369875054.png);
+}
+.sticker.small.s702110383208386 {
+  background-image: url(../images/stickers/small/702110383208386.png);
+}
+.sticker.small.s702110399875051 {
+  background-image: url(../images/stickers/small/702110399875051.png);
+}
+.sticker.small.s702110413208383 {
+  background-image: url(../images/stickers/small/702110413208383.png);
+}
+.sticker.small.s702110436541714 {
+  background-image: url(../images/stickers/small/702110436541714.png);
+}
+.sticker.small.s702110446541713 {
+  background-image: url(../images/stickers/small/702110446541713.png);
+}
+.sticker.small.s702110456541712 {
+  background-image: url(../images/stickers/small/702110456541712.png);
+}
+.sticker.small.s702110466541711 {
+  background-image: url(../images/stickers/small/702110466541711.png);
+}
+.sticker.small.s702127056540052 {
+  background-image: url(../images/stickers/small/702127056540052.png);
+}
+.sticker.small.s1573846232838561 {
+  background-image: url(../images/stickers/small/1573846232838561.png);
+}
+.sticker.small.s1573846259505225 {
+  background-image: url(../images/stickers/small/1573846259505225.png);
+}
+.sticker.small.s1573846282838556 {
+  background-image: url(../images/stickers/small/1573846282838556.png);
+}
+.sticker.small.s1573846306171887 {
+  background-image: url(../images/stickers/small/1573846306171887.png);
+}
+.sticker.small.s1573846349505216 {
+  background-image: url(../images/stickers/small/1573846349505216.png);
+}
+.sticker.small.s1573846376171880 {
+  background-image: url(../images/stickers/small/1573846376171880.png);
+}
+.sticker.small.s1573846412838543 {
+  background-image: url(../images/stickers/small/1573846412838543.png);
+}
+.sticker.small.s1573846426171875 {
+  background-image: url(../images/stickers/small/1573846426171875.png);
+}
+.sticker.small.s1573846436171874 {
+  background-image: url(../images/stickers/small/1573846436171874.png);
+}
+.sticker.small.s1573846449505206 {
+  background-image: url(../images/stickers/small/1573846449505206.png);
+}
+.sticker.small.s1573846472838537 {
+  background-image: url(../images/stickers/small/1573846472838537.png);
+}
+.sticker.small.s1573846496171868 {
+  background-image: url(../images/stickers/small/1573846496171868.png);
+}
+.sticker.small.s1573846506171867 {
+  background-image: url(../images/stickers/small/1573846506171867.png);
+}
+.sticker.small.s1573846552838529 {
+  background-image: url(../images/stickers/small/1573846552838529.png);
+}
+.sticker.small.s1573846619505189 {
+  background-image: url(../images/stickers/small/1573846619505189.png);
+}
+.sticker.small.s1573846639505187 {
+  background-image: url(../images/stickers/small/1573846639505187.png);
+}
+.sticker.small.s1573846656171852 {
+  background-image: url(../images/stickers/small/1573846656171852.png);
+}
+.sticker.small.s1573846666171851 {
+  background-image: url(../images/stickers/small/1573846666171851.png);
+}
+.sticker.small.s1573846699505181 {
+  background-image: url(../images/stickers/small/1573846699505181.png);
+}
+.sticker.small.s1573846749505176 {
+  background-image: url(../images/stickers/small/1573846749505176.png);
 }
 /* Sticker large */
 .sticker.large {
@@ -13195,146 +13396,326 @@ form .form-control.ng-invalid:focus {
 }
 /* 41 */
 .sticker.large.s499671063448730 {
-  background: url(../images/stickers/large/499671063448730.png);
+  background-image: url(../images/stickers/large/499671063448730.png);
 }
 .sticker.large.s499671103448726 {
-  background: url(../images/stickers/large/499671103448726.png);
+  background-image: url(../images/stickers/large/499671103448726.png);
 }
 .sticker.large.s499670973448739 {
-  background: url(../images/stickers/large/499670973448739.png);
+  background-image: url(../images/stickers/large/499670973448739.png);
 }
 .sticker.large.s499670946782075 {
-  background: url(../images/stickers/large/499670946782075.png);
+  background-image: url(../images/stickers/large/499670946782075.png);
 }
 /* 45 */
 .sticker.large.s499671050115398 {
-  background: url(../images/stickers/large/499671050115398.png);
+  background-image: url(../images/stickers/large/499671050115398.png);
 }
 .sticker.large.s499671006782069 {
-  background: url(../images/stickers/large/499671006782069.png);
+  background-image: url(../images/stickers/large/499671006782069.png);
 }
 .sticker.large.s499671090115394 {
-  background: url(../images/stickers/large/499671090115394.png);
+  background-image: url(../images/stickers/large/499671090115394.png);
 }
 .sticker.large.s499671210115382 {
-  background: url(../images/stickers/large/499671210115382.png);
+  background-image: url(../images/stickers/large/499671210115382.png);
 }
 /* 49 */
 .sticker.large.s499670980115405 {
-  background: url(../images/stickers/large/499670980115405.png);
+  background-image: url(../images/stickers/large/499670980115405.png);
 }
 .sticker.large.s499671136782056 {
-  background: url(../images/stickers/large/499671136782056.png);
+  background-image: url(../images/stickers/large/499671136782056.png);
 }
 .sticker.large.s499671143448722 {
-  background: url(../images/stickers/large/499671143448722.png);
+  background-image: url(../images/stickers/large/499671143448722.png);
 }
 .sticker.large.s499671170115386 {
-  background: url(../images/stickers/large/499671170115386.png);
+  background-image: url(../images/stickers/large/499671170115386.png);
 }
 /* 53 */
 .sticker.large.s499671076782062 {
-  background: url(../images/stickers/large/499671076782062.png);
+  background-image: url(../images/stickers/large/499671076782062.png);
 }
 .sticker.large.s499671000115403 {
-  background: url(../images/stickers/large/499671000115403.png);
+  background-image: url(../images/stickers/large/499671000115403.png);
 }
 .sticker.large.s499671116782058 {
-  background: url(../images/stickers/large/499671116782058.png);
+  background-image: url(../images/stickers/large/499671116782058.png);
 }
 .sticker.large.s499670940115409 {
-  background: url(../images/stickers/large/499670940115409.png);
+  background-image: url(../images/stickers/large/499670940115409.png);
 }
 /* 57 */
 .sticker.large.s499671156782054 {
-  background: url(../images/stickers/large/499671156782054.png);
+  background-image: url(../images/stickers/large/499671156782054.png);
 }
 .sticker.large.s499671020115401 {
-  background: url(../images/stickers/large/499671020115401.png);
+  background-image: url(../images/stickers/large/499671020115401.png);
 }
 .sticker.large.s499671026782067 {
-  background: url(../images/stickers/large/499671026782067.png);
+  background-image: url(../images/stickers/large/499671026782067.png);
 }
 .sticker.large.s499671043448732 {
-  background: url(../images/stickers/large/499671043448732.png);
+  background-image: url(../images/stickers/large/499671043448732.png);
 }
 /* 61 */
 .sticker.large.s499671190115384 {
-  background: url(../images/stickers/large/499671190115384.png);
+  background-image: url(../images/stickers/large/499671190115384.png);
 }
 .sticker.large.s499671183448718 {
-  background: url(../images/stickers/large/499671183448718.png);
+  background-image: url(../images/stickers/large/499671183448718.png);
 }
 .sticker.large.s499671013448735 {
-  background: url(../images/stickers/large/499671013448735.png);
+  background-image: url(../images/stickers/large/499671013448735.png);
 }
 .sticker.large.s499671123448724 {
-  background: url(../images/stickers/large/499671123448724.png);
+  background-image: url(../images/stickers/large/499671123448724.png);
 }
 /* 65 */
 .sticker.large.s499671096782060 {
-  background: url(../images/stickers/large/499671096782060.png);
+  background-image: url(../images/stickers/large/499671096782060.png);
 }
 .sticker.large.s499671083448728 {
-  background: url(../images/stickers/large/499671083448728.png);
+  background-image: url(../images/stickers/large/499671083448728.png);
 }
 .sticker.large.s499671243448712 {
-  background: url(../images/stickers/large/499671243448712.png);
+  background-image: url(../images/stickers/large/499671243448712.png);
 }
 .sticker.large.s499671110115392 {
-  background: url(../images/stickers/large/499671110115392.png);
+  background-image: url(../images/stickers/large/499671110115392.png);
 }
 /* 69 */
 .sticker.large.s499670960115407 {
-  background: url(../images/stickers/large/499670960115407.png);
+  background-image: url(../images/stickers/large/499670960115407.png);
 }
 .sticker.large.s499670966782073 {
-  background: url(../images/stickers/large/499670966782073.png);
+  background-image: url(../images/stickers/large/499670966782073.png);
 }
 .sticker.large.s499671203448716 {
-  background: url(../images/stickers/large/499671203448716.png);
+  background-image: url(../images/stickers/large/499671203448716.png);
 }
 .sticker.large.s499671163448720 {
-  background: url(../images/stickers/large/499671163448720.png);
+  background-image: url(../images/stickers/large/499671163448720.png);
 }
 /* 73 */
 .sticker.large.s499671216782048 {
-  background: url(../images/stickers/large/499671216782048.png);
+  background-image: url(../images/stickers/large/499671216782048.png);
 }
 .sticker.large.s499671033448733 {
-  background: url(../images/stickers/large/499671033448733.png);
+  background-image: url(../images/stickers/large/499671033448733.png);
 }
 .sticker.large.s499671226782047 {
-  background: url(../images/stickers/large/499671226782047.png);
+  background-image: url(../images/stickers/large/499671226782047.png);
 }
 .sticker.large.s499671056782064 {
-  background: url(../images/stickers/large/499671056782064.png);
+  background-image: url(../images/stickers/large/499671056782064.png);
 }
 /* 77 */
 .sticker.large.s499671233448713 {
-  background: url(../images/stickers/large/499671233448713.png);
+  background-image: url(../images/stickers/large/499671233448713.png);
 }
 .sticker.large.s499671130115390 {
-  background: url(../images/stickers/large/499671130115390.png);
+  background-image: url(../images/stickers/large/499671130115390.png);
 }
 .sticker.large.s499670953448741 {
-  background: url(../images/stickers/large/499670953448741.png);
+  background-image: url(../images/stickers/large/499670953448741.png);
 }
 .sticker.large.s499671176782052 {
-  background: url(../images/stickers/large/499671176782052.png);
+  background-image: url(../images/stickers/large/499671176782052.png);
 }
 /* 81 */
 .sticker.large.s499671196782050 {
-  background: url(../images/stickers/large/499671196782050.png);
+  background-image: url(../images/stickers/large/499671196782050.png);
 }
 .sticker.large.s499671070115396 {
-  background: url(../images/stickers/large/499671070115396.png);
+  background-image: url(../images/stickers/large/499671070115396.png);
 }
 .sticker.large.s499670990115404 {
-  background: url(../images/stickers/large/499670990115404.png);
+  background-image: url(../images/stickers/large/499670990115404.png);
 }
 .sticker.large.s499671150115388 {
-  background: url(../images/stickers/large/499671150115388.png);
+  background-image: url(../images/stickers/large/499671150115388.png);
+}
+.sticker.large.s364383977058241 {
+  background-image: url(../images/stickers/large/364383977058241.png);
+}
+.sticker.large.s364383987058240 {
+  background-image: url(../images/stickers/large/364383987058240.png);
+}
+.sticker.large.s364383997058239 {
+  background-image: url(../images/stickers/large/364383997058239.png);
+}
+.sticker.large.s364384007058238 {
+  background-image: url(../images/stickers/large/364384007058238.png);
+}
+.sticker.large.s364384020391570 {
+  background-image: url(../images/stickers/large/364384020391570.png);
+}
+.sticker.large.s364384040391568 {
+  background-image: url(../images/stickers/large/364384040391568.png);
+}
+.sticker.large.s364384050391567 {
+  background-image: url(../images/stickers/large/364384050391567.png);
+}
+.sticker.large.s364384060391566 {
+  background-image: url(../images/stickers/large/364384060391566.png);
+}
+.sticker.large.s364384080391564 {
+  background-image: url(../images/stickers/large/364384080391564.png);
+}
+.sticker.large.s364384093724896 {
+  background-image: url(../images/stickers/large/364384093724896.png);
+}
+.sticker.large.s364384107058228 {
+  background-image: url(../images/stickers/large/364384107058228.png);
+}
+.sticker.large.s364384117058227 {
+  background-image: url(../images/stickers/large/364384117058227.png);
+}
+.sticker.large.s364384127058226 {
+  background-image: url(../images/stickers/large/364384127058226.png);
+}
+.sticker.large.s364384137058225 {
+  background-image: url(../images/stickers/large/364384137058225.png);
+}
+.sticker.large.s364384147058224 {
+  background-image: url(../images/stickers/large/364384147058224.png);
+}
+.sticker.large.s364384157058223 {
+  background-image: url(../images/stickers/large/364384157058223.png);
+}
+.sticker.large.s364384170391555 {
+  background-image: url(../images/stickers/large/364384170391555.png);
+}
+.sticker.large.s364384180391554 {
+  background-image: url(../images/stickers/large/364384180391554.png);
+}
+.sticker.large.s364384190391553 {
+  background-image: url(../images/stickers/large/364384190391553.png);
+}
+.sticker.large.s364384200391552 {
+  background-image: url(../images/stickers/large/364384200391552.png);
+}
+.sticker.large.s702110249875066 {
+  background-image: url(../images/stickers/large/702110249875066.png);
+}
+.sticker.large.s702110259875065 {
+  background-image: url(../images/stickers/large/702110259875065.png);
+}
+.sticker.large.s702110269875064 {
+  background-image: url(../images/stickers/large/702110269875064.png);
+}
+.sticker.large.s702110279875063 {
+  background-image: url(../images/stickers/large/702110279875063.png);
+}
+.sticker.large.s702110293208395 {
+  background-image: url(../images/stickers/large/702110293208395.png);
+}
+.sticker.large.s702110306541727 {
+  background-image: url(../images/stickers/large/702110306541727.png);
+}
+.sticker.large.s702110316541726 {
+  background-image: url(../images/stickers/large/702110316541726.png);
+}
+.sticker.large.s702110326541725 {
+  background-image: url(../images/stickers/large/702110326541725.png);
+}
+.sticker.large.s702110339875057 {
+  background-image: url(../images/stickers/large/702110339875057.png);
+}
+.sticker.large.s702110349875056 {
+  background-image: url(../images/stickers/large/702110349875056.png);
+}
+.sticker.large.s702110359875055 {
+  background-image: url(../images/stickers/large/702110359875055.png);
+}
+.sticker.large.s702110369875054 {
+  background-image: url(../images/stickers/large/702110369875054.png);
+}
+.sticker.large.s702110383208386 {
+  background-image: url(../images/stickers/large/702110383208386.png);
+}
+.sticker.large.s702110399875051 {
+  background-image: url(../images/stickers/large/702110399875051.png);
+}
+.sticker.large.s702110413208383 {
+  background-image: url(../images/stickers/large/702110413208383.png);
+}
+.sticker.large.s702110436541714 {
+  background-image: url(../images/stickers/large/702110436541714.png);
+}
+.sticker.large.s702110446541713 {
+  background-image: url(../images/stickers/large/702110446541713.png);
+}
+.sticker.large.s702110456541712 {
+  background-image: url(../images/stickers/large/702110456541712.png);
+}
+.sticker.large.s702110466541711 {
+  background-image: url(../images/stickers/large/702110466541711.png);
+}
+.sticker.large.s702127056540052 {
+  background-image: url(../images/stickers/large/702127056540052.png);
+}
+.sticker.large.s1573846232838561 {
+  background-image: url(../images/stickers/large/1573846232838561.png);
+}
+.sticker.large.s1573846259505225 {
+  background-image: url(../images/stickers/large/1573846259505225.png);
+}
+.sticker.large.s1573846282838556 {
+  background-image: url(../images/stickers/large/1573846282838556.png);
+}
+.sticker.large.s1573846306171887 {
+  background-image: url(../images/stickers/large/1573846306171887.png);
+}
+.sticker.large.s1573846349505216 {
+  background-image: url(../images/stickers/large/1573846349505216.png);
+}
+.sticker.large.s1573846376171880 {
+  background-image: url(../images/stickers/large/1573846376171880.png);
+}
+.sticker.large.s1573846412838543 {
+  background-image: url(../images/stickers/large/1573846412838543.png);
+}
+.sticker.large.s1573846426171875 {
+  background-image: url(../images/stickers/large/1573846426171875.png);
+}
+.sticker.large.s1573846436171874 {
+  background-image: url(../images/stickers/large/1573846436171874.png);
+}
+.sticker.large.s1573846449505206 {
+  background-image: url(../images/stickers/large/1573846449505206.png);
+}
+.sticker.large.s1573846472838537 {
+  background-image: url(../images/stickers/large/1573846472838537.png);
+}
+.sticker.large.s1573846496171868 {
+  background-image: url(../images/stickers/large/1573846496171868.png);
+}
+.sticker.large.s1573846506171867 {
+  background-image: url(../images/stickers/large/1573846506171867.png);
+}
+.sticker.large.s1573846552838529 {
+  background-image: url(../images/stickers/large/1573846552838529.png);
+}
+.sticker.large.s1573846619505189 {
+  background-image: url(../images/stickers/large/1573846619505189.png);
+}
+.sticker.large.s1573846639505187 {
+  background-image: url(../images/stickers/large/1573846639505187.png);
+}
+.sticker.large.s1573846656171852 {
+  background-image: url(../images/stickers/large/1573846656171852.png);
+}
+.sticker.large.s1573846666171851 {
+  background-image: url(../images/stickers/large/1573846666171851.png);
+}
+.sticker.large.s1573846699505181 {
+  background-image: url(../images/stickers/large/1573846699505181.png);
+}
+.sticker.large.s1573846749505176 {
+  background-image: url(../images/stickers/large/1573846749505176.png);
 }
 #bottom-panel {
   height: 140px;

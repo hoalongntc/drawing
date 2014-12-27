@@ -1,1 +1,0 @@
-ns=`ls | grep _`; for n in $ns ; do s=`echo $n | awk -F'_' '{print $2}'`; mv $n $s; done
